@@ -5,5 +5,6 @@ include(
     "spring-cloud-sample-eureka-service",
     "spring-cloud-sample-zuul-service",
     "spring-cloud-sample-service-one",
-    "spring-cloud-sample-service-two"
+    "spring-cloud-sample-service-two",
+    "spring-cloud-sample-config-server"
 )

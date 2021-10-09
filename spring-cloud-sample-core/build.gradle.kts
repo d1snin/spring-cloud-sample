@@ -1,11 +1,16 @@
 version = "0.0.1"
 
-val springStarterVersion = "2.5.5"
-val springCloudStarterVersion = "3.0.4"
+extra["springCloudVersion"] = "Hoxton.SR9"
+
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+    }
+}
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-validation:$springStarterVersion")
-    implementation("org.springframework.boot:spring-boot-starter-data-mongodb:$springStarterVersion")
-    implementation("org.springframework.cloud:spring-cloud-starter-openfeign:$springCloudStarterVersion")
-    implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer:$springCloudStarterVersion")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
+    implementation("org.springframework.cloud:spring-cloud-starter-loadbalancer")
 }
